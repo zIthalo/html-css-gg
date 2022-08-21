@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            max-width: 800px;/*largura máxima para para a organização do conteúdo da main*/
+            min-width: 250px;/*Largura mínima para organização da main*/
+            margin: auto;/*Para centralizar a main no centro de uma tela*/
+        }
+        img{
+            width: 100%;/*este comando dentro de img serve para organizar a foto dentro de qualquer tela ou seja, tem como objetivo sempre deixar a foto sem vazar para fora de uma tag*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sit sunt nihil minima at dolorum voluptatum velit officia, explicabo magni consequuntur, veritatis placeat doloremque quis rem iusto! Magni, officiis voluptatem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias incidunt expedita quos soluta repellendus facilis illo aliquid distinctio! Esse dolores fugit consectetur enim fugiat laboriosam nulla, illum rem harum mollitia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, eaque dolor! Numquam ipsa architecto nulla hic quibusdam maiores porro, vitae expedita. Quod quae aliquid rem suscipit cum quia dolores nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae id reiciendis corrupti consequatur iusto eos ipsam doloremque minus? Excepturi harum eos ipsum quas laudantium quibusdam nemo deleniti. Aliquam, ea nostrum.</p>
+        <picture>
+            <source media="(max-width: 600px )" srcset="imagens/irina-blok-pq.jpg" type="image/jpg">
+            <img src="imagens/irina-blok.jpg" alt="imagem da irina block">
+        </picture> <!--Este é um recurso para deixar a imagem responsiva, neste caso aqui diz: (quando a largura máxima for de 600px coloque a imagem menor)-->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sit sunt nihil minima at dolorum voluptatum velit officia, explicabo magni consequuntur, veritatis placeat doloremque quis rem iusto! Magni, officiis voluptatem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias incidunt expedita quos soluta repellendus facilis illo aliquid distinctio! Esse dolores fugit consectetur enim fugiat laboriosam nulla, illum rem harum mollitia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, eaque dolor! Numquam ipsa architecto nulla hic quibusdam maiores porro, vitae expedita. Quod quae aliquid rem suscipit cum quia dolores nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae id reiciendis corrupti consequatur iusto eos ipsam doloremque minus? Excepturi harum eos ipsum quas laudantium quibusdam nemo deleniti. Aliquam, ea nostrum.</p>
+    </main>
+</body>
+</html>

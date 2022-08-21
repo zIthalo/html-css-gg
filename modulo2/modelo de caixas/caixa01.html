@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas </title>
+    <style>
+        h1{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(255, 255, 2);
+            border: 10px solid darkcyan;
+           
+           padding: 10px;
+           /*se todas as pedidas de um padding ou margin forem iguais você não precisa colocar os valores repetidos, apenas coloque um valor e o código já irá reconhecer que você quer que fique tudo de um tamanho quadrado*/
+
+            /*a ordem de padding é em sentido horário a de margin também (cima direita baixo esquerda) */
+
+            /*no devtools, comop já visto, você vai conseguir fazer alguns testes que poderão te ajudar na hora do desenvolvimento*/
+
+           margin: auto; /*este comando vai deixar a caixa no meio se for um texto coloque text-align: center;*/
+
+           outline: 5px dashed salmon; /*uma borda acima da borda*/
+        }
+        a{
+            border: 10px solid red;
+            /*existe também o tipo de borda double(barra dupla) e groove(borda 3d)*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de box-level</h1>
+    <p>Parágrafos são exemplos de box levels mas os <a href="#">links</a> são exemplos de inline-level</p>
+    <!--user agent: toda vez que você ver este nome, no dev tools, significa que é o navegador que faz alguma configuração padrão
+    display:block; significa que o elemento é do tipo box-level-->
+</body>
+</html>

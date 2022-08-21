@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou, simplesmente aumente e diminua o tamanho da janela do site</p>
+    <picture>
+        <source media="(max-width:750px )" srcset="img/Pithalo.jpg" type="image/png">
+        <source media="(max-width:1050px )" srcset="img/Mithalo.jpg" type="image/png">
+        
+        <img src="img/Githalo.jpg" alt="Imagem Flexível">
+    </picture>
+    <!--O que foi feito para as imagens ficarem dinâmicas?-->
+    <!--Primeiro eu fui no GIMP e diminuí as fotos para p= 300px m= 750px e g= 1000px. Abaixei, também a resolução das mesmas para 80. E como criar uma imagem no gimp 1º vá em arquivo, nova, selecione o tamanho das imagens em px e nas opções avançadas abaixe a resolução para 80, com isso você criou a sua imagem-->
+    <!--Quando se cria a tag picture isto indica que você irá colocar dinamismo em alguma imagem, depois de criar a tag picture você irá adicionar uma imagem, depois você vai querer que uma imagem grande fique menor de acordo com as telas de uma TV, PC e um Celular. Certo mas como fazer isso? Crie uma tag source e escolha a opção media type, depois quando a tag estiver criada, na área media, ao invés de min-width troque por max-width coloque o valor de 1050 px assim: 
+    
+    <source media="(max-width:1050px )" srcset="img/M.png" type="image/png"> (Na parte srcset="" você irá escolher a pasta que contém as imagens e irá selecionar a imagem. Na parte type="" coloque image/png [tipo da imagem])-->
+    <!--<audio src="midia/geracao-florida.mp3" controls></audio>-->
+    <!--Para adicionar o audio a uma página você usa este comando acima, não esqueça do parametro controls para aparecer a barra de audio. Se você quiser que o audio toque sem parar você digita o parâmetro autoplay dentro da tag audio-->
+    <!--Formatos de audio mp3/mpeg, WAV e OGG-->
+
+    <audio preload="metadata"><!--Sempre que for colocar o preload coloque sempre metadata pois vai agilizar no carregamento do site-->
+    <!--No audio você também pode colocar o autoplay (para tocar assim que abrir o site), controls(para mostrar os controles de audio) e o loop(para repetir o audio assim que o mesmo terminar)-->
+        <source src="midia/geracao-florida.mp3" type="audio/mpeg">
+        <!--Se tiver conversores de audio, o que é bom, coloque o mesmo audio em outros formatos como ogg e wav ↓ se liga no ex-->
+        <source src="midia/geracao-florida.ogg" type="audio/ogg">
+        <source src="midia/geracao-florida.wav" type="audio/wav">
+        <P>Infelizmente seu navegador não consegue reproduzir o audio, <a href="midia/geracao-florida.mp3">clique aqui para baixar o audio.</a></P>
+    </audio>
+    <!--Tipos de video recomendados mp4/m4v ogv e webm (fraco demais)-->
+</body>
+</html>

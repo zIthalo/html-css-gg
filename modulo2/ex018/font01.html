@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes com Google fonts</title>
+    <style>
+         @font-face { /*o @font-face é um seletor para importar uma fonte externa que você baixou*/
+            font-family: 'Stay';
+            src: url('fonts/Stay Athaliya.otf') format('opentype'), url('fonts/Stay Athaliya.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            /*tipos de format()
+            *opentype (otf)
+            *truetype (ttf)
+            *embedded-opentype
+            *truetype-aat (Apple Advanced Typography)
+            *SVG
+            */
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+
+        /*Todas as regras devem sempre estar na primeira linha de um código css e fora de um seletor você pode colocar quantas regras de import você quiser e precisar*/
+        body{
+            font-family: 'Stay', Arial, Helvetica, sans-serif;
+            /*achei no site dafont.com*/
+            font-size: 16px;
+            color: black;
+        }
+        h1{
+            font-family: 'Kaushan Script', 'Times New Roman', Times, serif;
+        }
+        h2{
+            font-family: 'Kaushan Script', 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>fontes importadas do google fonts</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis, sequi temporibus numquam assumenda delectus praesentium nam sunt necessitatibus enim at repudiandae magni adipisci dolorem, libero esse ex! Veniam, id.</p>
+
+    <h2>subtítulo</h2>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+        a:visited{ /*Este comando aqui diz assim: quando um link já foi visitado ele ficará na cor vermelho escuro*/
+            color: darkred;
+        }
+        a:hover{ /*Quando o mouse passar por cima...*/
+            text-decoration: underline;
+            color: gray;
+        }
+        a:active{ /*Quando eu clicar no link isto acontecerá*/
+            color: yellowgreen;
+        }
+
+        /*Pseudo elemento são representados por dois pontos 2x (::) */
+        .especial::after{ /*Com este pseudo elemento você irá colocar a palavra link depois de cada anchor do seu site*/
+            content: ' ←';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+        .especial::before{
+            content: '→ ';
+        }
+        .especial{
+            background-color: aqua;
+            color: black;
+        }
+        ul{
+            text-decoration: none;
+        }
+        /*
+        SELETORES PERSONALIZADOS
+        O QUE SIGNIFICA CADA SÍMBOLO?
+        # = id
+        . = class 
+        : = pseudoclass
+        :: = pseudo elemento
+        > = children
+        */
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul type="none">
+        <li><a href="#" target="_blank">Github</a></li>
+        <li><a href="#" target="_blank" class="especial">Youtube</a></li>
+        <li><a href="#" target="_blank" rel="">Site CeV</a></li>
+    </ul>
+</body>
+</html>

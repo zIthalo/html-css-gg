@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+body{
+    background-color: #70FA8E;
+}
+#principal{
+    font: normal 1em;
+    text-align: center;
+    background-color:#105f21 ;
+    color:#ff4258 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: #AD3D4A;
+}
+
+h2{
+    color: #FF8C9A;
+}
+/*Dentro de um documento HTML a regra é que não se podem ter mais de um id com mesmo nome. Mas você pode usar classes iguais em mais de uma tag em html*/
+
+.basico{
+    color: green;
+}
+
+.intermediario{
+    color: rgb(38, 0, 255);
+    font-weight: 700;
+}
+
+.avancado{
+    color: red;
+}
+.destaque{
+    background-color: greenyellow;
+}/*podemos colocar mais de uma classe em uma mesma tag para diferenciá-la você também pode colocar um id e class em um mesmo elemento*/

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Formatação de textos</title>
+    <style>
+        body{
+            font: normal 13pt arial;
+            background-color: black;
+            color: white;
+        }
+        mark{
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Nessa frase temos um <b>termo em negrito</b> usando a tag &lt;b&gt;(Não semântica)</p>
+    <p>Nesta frase tenho um <strong>termo em destaque</strong> usando a tag &lt;strong&gt;(Semântica)</p>
+    <!--Quando eu quero colocar alguma coisa em itálico eu pressiono ctrl + shift + p, e depois  eu escolho a opção Wrap whith abbreviation ou envelope com abreviatura e depois a ide vai perguntar o que você vai querer abreviar daí você seleciona o conteúdo e pressiona a tecla i, se você já selecionou antes precione i ;), para deixar em itálico-->
+    <h2>Itálico / Ênfase</h2>
+    <p>Nesta frase temos um <i>termo em itálico</i> usando a tag &lt;i&gt; (Não semântica).</p>
+    <p>Nesta frase, temos um <en>termo em ênfase</en> usando a tag &lt;en&gt; (Semântica).</p>
+    <!--Outra dica para você colocar tags de abreviação, de ênfase, etc selecione a frase/ texto, depois use o ctrl + shift + p (Neste caso será para colocar um parágrafo) pressione enter depois p e depois enter de novo. o que eu quero dizer aqui é que você pode colocar qualquer tag em um título texto apenas selecionando o conteúdo, depois ctrl + shift + p dê enter em wrap with abbreviation, depois digite a tag e dê enter para colocar a tag-->
+    <!--O que não é semântico coloque no css o que é semântico coloque em html. E como saber se é semântico ou não? 1º com o tempo se pega a manha e 2º Imagine que fosse focê falando para determinado conteúdo que ele se transformará no que você quiser por exemplo, você diz para um texto "Você se transformará em um parágrafo", e ele se transformará em parágravo, tipo isso, cê me entende.-->.
+    <h2>Marcando texto</h2>
+    <p>Podemos criar também um <mark>texto marcado</mark> usando a tag &lt;mark&gt;</p>
+    <p>E no outro parágrafo, temos <mark>outro texto marcado</mark> no final</p>
+    <!--Posso usar duas formas de mudar a cor do mark sendo em css selecionando todas as tags mark ou dentro de uma dtag mark eu coloco style="background-color: greenyelow;"(por exemplo)-->
+    <h2>Texto grande / Texto pequeno</h2>
+    <p>Estamos criando um <big>texto grande</big> (usando a tag &lt;big&gt; [não semântica])e um <small>texto pequeno</small>usando a tag &lt;small&gt;[Semântica]</p>
+    <!--Neste caso a tag big não deve ser mais utilizada pois ela está obsoleta, se você quiser aumentar um texto faça isso no css através de uma classe. Mas se quiser diminuir um texto use a tag small sem problemas ou vá no css (cê que sabe)-->
+    <h2>Texto deletado</h2>
+    <p>podemos marcar um <del>texto como excluído</del> para indicar que ele deve ser lido, mas não considerado usando a tag &lt;del&gt;</p>
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar um <ins>texto como inserido </ins>para dar uma ênfase e indicar que ele foi adicionado depois usando a tag &lt;ins&gt;</p>
+    <h2>Texto sobrescrito </h2>
+    <p>Para inserir coisas do tipo x<sup>20</sup>+30 use a tag &lt;sup&gt;</p>
+    <h2>Texto subscrito</h2>
+    <p>Para inserir coisas do tipo H<sub>2</sub>O use a tag &lt;sub&gt;</p>
+</body>
+</html>

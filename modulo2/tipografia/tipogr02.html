@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com fontes</title>
+    <style>
+        body{
+            /*para colocar fontes mais gordinhas estilo bold e extra bold você precisará primeiro colocar a fonte work sans depois você usa o comando 'font-weight' e as declarações do font-weight podem ser lighter, normal, bold, bolder     OU VOCÊ PODE COLOCAR DE 100 EM 100 ATÉ 900  para representar o negrito de uma fonte você pode até digitar font-weight: e apertar aqui o ctrl + espaço ; usar o font-style:; para deixar em itálico usando o italic entro dá área de configuração. text-decoration:; para colocar underline (para todas essas configurações aperte ctrl + expaço entre :; caso se esqueça qual o nome da configuração)*/
+
+            /*Quais configurações que mais usamos de fontes?
+            font-family:;
+            font-weight:;
+            font-size:;
+            font-style:;
+            */
+            /*shorthand (font) você pode condensar todas as configurações de fonte usando o comando 'font:;'
+            E QUAL SERÁ A ORDEM DE CONFIGURAÇÃO DO FONT?
+            1st fontstyle 2nd font-weight 3rd font-size 4th font-family*/
+            font-family:Arial, Helvetica, sans-serif;
+        /*Quando uma fonte tiver duas palavras elas são colocadas entre aspas*/
+        /*https://www.w3schools.com/cssref/css_websafe_fonts.asp) site para saber as melhores combinações de fontes para se usar na web*/
+        font-size: 1em;
+        text-indent: 20px;
+        }
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /*
+        Medidas absolutas:
+        cm, mm, in, px, pt, pc.
+        (pt, pc não recomandados para se usar em telas mas sim em papel)
+        (cm, mm pode-se dar um erro em tamanhos diferentes de delas)
+        Medidas Realativas:
+
+        em(medida relativa ao tamanho atual da fonte de acordo com a altura da letra M de uma determinada fonte), ex(altura de uma letra de acordo com a letra x de cada fonte) rem(relativo ao root) vw(view width largura da vewport que é o tamanho da sua tela) vh(view height) % o que vamos mais utilizar é o em (o recomendado usar sempre é o px e em).
+
+        Em geral os navegadores usam o tamanho de fonte de 16px.
+        
+        16px é igual a 1em (tente usar mais a forma do em, porque ele será mais responsivo em telas maiores e  menores)
+        */
+        
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, beatae numquam facilis tempore iste ducimus. Reiciendis, alias velit ipsum, natus sed quod asperiores repudiandae itaque nihil facilis vero. Exercitationem, laborum!</p>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, aperiam exercitationem iusto vitae modi asperiores odio doloremque incidunt quisquam accusantium ab eaque, saepe minima officiis non labore possimus. Ea, tempora?</p>
+    <h2>Subtítulo do exercício</h2>
+    
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex corrupti maxime sint magni, at officia incidunt reiciendis a explicabo cum excepturi reprehenderit eveniet, rerum accusantium commodi molestias voluptas molestiae nam.</p>
+
+    
+</body>
+</html>

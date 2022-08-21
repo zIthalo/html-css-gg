@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: burlywood
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 13px;
+        }
+        h1{
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.76);
+        }
+        nav{
+            background-color: rgb(156, 66, 66);
+            padding: 3px;
+            border-radius: 13px;
+            box-shadow: 2px 2px  4px 2px rgba(0, 0, 0, 0.397);
+            /*box-shadow: 1px 1px 1px black;deslocamento, horizontal, vertical, espalhamento e cor. Podemos fazer também criar a própria sombra indo em nav, no dev tools, passando o mouse nos 3 pontinhos no goole chorme e selecionando o create box shadow, daí é só arrastar o ponto para fazer a sua sombra. Outset é para colocar a sombra fora do seu nav. Inset para colocar a caixa dentro da sombra se coloca sempre no início do código
+            Blur- pode ser colocado antes do espalhamento para dar uma embaçada na sombra*/
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.404);
+            border-radius: 10px 0;/*Aqui você também pode configurar todos os lados individualmente. como assim? ex você pode criar o border-radius: 10px 20px 30px 40px;[deste jeito] (sequencia de configs cima esquerda, cima direita, baixo direita, baixo esquerda)
+            Você também pode fazer este border-radius: 20px 0(ou vice-versa); [deste jeito] para somente configurar cima-esquerda baixo-direita e vice-versa para configurar os lados*/
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0;
+            border-radius: 13px;
+        }
+        footer > P {
+            margin: 0px;
+        }
+        article{
+            background-color: lightcoral;
+        }
+        article > aside{
+            background-color: aquamarine;
+        }
+        #bola{/*isto cria uma bola*/
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+<!--Monte um site com tags semãnticas 1º crie o header-->
+    <header> <!--Cabeçalho-->
+        <h1>meu site</h1> <!--Todas estas tags são como se fossem divs sendo que são divs semânticas o mecanismo de busca do google dará mais relevância para quem usa tags semânticas.-->
+        <nav> <!--Esta tag é usada para construir o menu de um site-->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main> <!--Tag onde irá o conteúdo principal-->
+        <section id="assuntos"> <!--Seção que pode ficar dentro de uma tag article sem problemas-->
+            <p>Esportes política e Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <aside>
+                    <h2>notícia sobre o brasil</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam aut eum repellendus pariatur quod debitis esse, sit ratione maxime quam, voluptatibus facere minus fugit eaque deleniti cupiditate, exercitationem veniam sed.</p>
+                    <p>Escrito por Ithalo Willian</p>
+                </aside>
+            </article>
+            <article>
+                
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Ithalo Willian</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

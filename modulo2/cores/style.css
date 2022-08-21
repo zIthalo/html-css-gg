@@ -1,0 +1,36 @@
+@charset "UTF-8"
+
+*{
+    /*height: 100%;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: linear-gradient(to right, #FFA952, #FCC692, #993B27, #FFA952);
+    /*Este comando é o que cria o gradiente degradê*/
+}
+p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background-color: white;
+    border-radius: 10px; /*Serve para deixar bordas arredondadas*/
+    width: 600px; /*Esta é a largura máxima da caixa*/
+    padding: 10px;
+    margin: auto; /*Este comando serve para centralizar a tag, classe ou id que você chamar aqui no css independente do tamanho da tela*/
+    box-shadow: 5px 5px 15px #501f14bb; /*Sequencia das sombras: lado, baixo, espalhamento e cor(para sombras não precisa se colocar vírgulas)*/
+}
+h1{
+    color: #993B27;
+    text-align: center; /*Alinhamento de texto*/
+    text-shadow: 1px 1px 2px #5a2317; /*Dombra de texto*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: #FFA952;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}

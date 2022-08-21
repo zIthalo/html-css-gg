@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos em html5</title>
+</head>
+<body>
+    <h1>Videos no site</h1>
+    <p>Este video está hospedado em meu proprio servidor</p>
+    <!--Esta forma abaixo é uma forma simples de colocar video, o ponto negativo é que você só pode colocar um tipo de video e este tipo pode não ser compatível com outros navegadores, entaõ o melho a se fazer é da forma onde se possa colocar o mesmo video em outros tipos para carregar em qualquer tipo de navegador-->
+    <!--<video src="videos/gaivotas.mp4" controls width="500" loop></video>-->
+    <!--Para converter videos para um formato menor use o programa handbrake faça o download dele e converta-->
+    
+    <!--Para colocar videos da forma mais completa segue a mesma ideia de colocar um audio veja no ex↓-->
+
+    <video width="500" poster="videos/Curso de Inglês (1).png" controls><!--O parametro poster vai fazer com que seu video mostre uma foto de capa um thumbnail coloquei width 500 para ele ficar menor na aparência do meu site e os controls para mostrar os controles kk-->
+        <source src="videos/Gaivotas.m4v" type="video/m4v"> <!--Sempre que for abrir a tag source nunca esquecer de colocar o src e apertar ctrl + espaço para procurar o video e o type para colocar o tipo do arquivo, só irá funcionar se você fizer isto.-->
+        <source src="videos/Gaivotas.webm" type="video/webm">
+        <source src="videos/gaivotas.mp4" type="video/mp4">
+        <p>Seu navegador não tem compatibilidade com reprodução de videos.</p>
+    </video>
+    <!--Esta forma de colocar videos ficará muito caro para seu cliente  pois existem mais de um tipo de video e a taxa de download multiplicará o tamanho dos videos para hospedagem, então o melho a se fazer é assistir o próximo video para entender melhor o que será feito. -->
+    <h1>Inserindo videos do youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/m7p0C9VJu6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

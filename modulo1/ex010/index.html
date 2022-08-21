@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links e âncoras</title>
+    <link rel="stylesheet" href="">
+    <style>
+        li{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Links e Âncoras</h1>
+    <p>Como acessar o repositório do GitHub do <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/08%20-%20Formata%C3%A7%C3%A3o%20de%20Textos.pdf" target="_blank">Gustavo Guanabara</a></p> <!--Envelopar ctrl +shift + p-->
+    <p>Você também pode acessar o canal gratuito do youtube <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank" rel="external">Curso em Vídeo</a></p>
+    <!--Dica de ouro: Sempre que for colocar um link que não do seu site use o target="_blank", para que o usuário não saia completamente do seu site e não volte mais. Também use o rel="external" depois do target para avisar ao navegador que se trata de um outro site que não é o seu-->
+    <h2>Usando Links Internos</h2>
+    <p>Este é o link para <a href="página2.html" rel="next" target="_self">minha página interna</a></p>
+    <!--Use o rel para ajudar o navegador a saber o que você quer dizer com este comando-->
+    <!--Quando você for mandar para um link de propaganda, se o propagandista não pedir o dofollow no rel, coloque sempre nofollow assim rel="nofollow"(ou dofollow no lugar)-->
+    <p>Você também pode acessar <a href="noticias/pag003.html" target="_self"> nossa página de notícias</a></p>
+    <!--Target self serve para avisar ao navegador que o link está apontando para a uma página que é do seu site-->
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/05 - Caracteres, parágrafos e quebras de linha.pdf"target="_blank" download="Caracteres, parágrafos e quebras de linha.rar"
+            type="application/pdf">Baixar o livro em pdf</a></li>
+        <li><a href="livro/05 - Caracteres, parágrafos e quebras de linha.rar" target="_blank" download="Caracteres, parágrafos e quebras de linha.rar" type="application/rar">Livro compactado em zip</a></li>
+    </ul>
+</body>
+</html>

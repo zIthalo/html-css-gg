@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classe</title>
+    <style>
+        div{
+            display: inline-block; /*Este comando serve para alinhar as divs eum uma só linha*/
+            background-color: lightgrey;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        /*As pseudoclasses são representadas por :  e elas têm que estar relacionadas a um elemento (exemplo h1:hover, div:hover, section:hover, etc) ou a uma classe (exemplo .d1:hover, .classe:hover etc.) As pseudo classes aparecem assim que você colocar o elemento ou a classe e depois dele os : logo irá mostrar a lista de classes*/
+        div:hover{ /*O que significa hover? Significa "quando eu passar o mouse por cima deste elemento ou classe irá acontecer algo, como mudar um background irá mostrar um texto escondido ou qualquer outra coisa"*/
+            background-color: yellow;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

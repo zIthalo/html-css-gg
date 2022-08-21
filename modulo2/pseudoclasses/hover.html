@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div > p {/*O que isso significa? Isto significa que eu estou pegando um parágrafo filho/child de uma div para fazer alterações nele*/
+            display: none /*fazer sumir*/;
+        }
+        div:hover > p{ /*E esta configuração o que significa? serve para quando eu passar o mouse em cima da div que tem um filho p, apareça o conteúdo oculto*/
+            display: block; /*fazer aparecer*/
+            color: white;
+            background-color: black;
+            width: 300px;
+        }
+        div:hover{
+            color: red;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>passe o mouse sobre o texto abaixo</p>
+    <div>Passe o mouse aqui
+        <p>texto escondido</p>
+    </div>
+    <p>fim do exemplo</p>
+</body>
+</html>
