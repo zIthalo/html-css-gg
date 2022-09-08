@@ -92,7 +92,7 @@ main{
     max-width: 1000px;/*tamanho máximo*/
     margin: auto;/*Centralizar*/
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.712);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.73);
     margin-bottom: 20px;
     border-bottom-left-radius: 10px; /*para que serve isto? Serve para deixar somente um lado da tag arredondado, neste caso coloquei o lado de baixo esquerdo. no código abaixo eu fiz a mesma coisa sendo que ao invés do lado baixo esquerdo eu fiz o lado baixo direito*/
     border-bottom-right-radius: 10px;
@@ -175,7 +175,6 @@ aside{
     padding: 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.274);
-
 }
 
 aside > h3{
