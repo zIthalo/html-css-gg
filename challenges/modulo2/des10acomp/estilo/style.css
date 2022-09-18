@@ -106,7 +106,7 @@ main h1{
 
 
 main p{
-    margin: 15px 0px;/*Quando a gente configura um margin o padding somente com 2 valores significa: cima-baixo e direita-esquerda ou seja linha x e linha y, ou seja vertical e horizontal*/
+    margin: 15px 0px;/*Quando a gente configura um margin ou padding somente com 2 valores significa: cima-baixo e direita-esquerda ou seja linha x e linha y, ou seja vertical e horizontal*/
     text-align: justify;
     text-indent: 30px; /*Serve para dar Afastamento inicial de cada parágrafo*/
     line-height: 2em; /*Seve para dar Afastamento entre linhas de texto*/
