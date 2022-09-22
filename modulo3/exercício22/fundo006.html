@@ -7,22 +7,29 @@
     <title>Document</title>
     <style>
         body{
+            height: 100vh;
             background-color: black; /*mesmo que tenha uma imagem no fundo do seu site é legal que você coloque uma cor de fundo pois o conteúdo do site aparecerá primeiro que  a imagem então para seu site ficar mais organizado faça desta forma*/
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
             background-repeat: no-repeat;
-            height: 100vh;
             background-size: cover; /*usar este tipo de configuração do background size é perfeito pois ele fará com que sua imagem sempre cubra toda parte do fundo do seu site, mesmo que corte alguns pedaços da imagem, fica perfeita a vizualização
             
              O background size aceita: o valor auto (o navegador se vira para colocar a imagem no tamanho), podemos configurar o tamanho da imagem em pixels ou em porcentagem da tela, temos o contain que o navegador tenta mostrar 100% da imagem e temos o cover que cobrirá todo o site mas dependendo do tamanho da tela ele irá cortar um pouco da imagem, porém como dito antes ele irá cobrir todo o site se estivar na tag body é claro.
 
-                Detalhe, se o conteúdo do site for maior que a imagem  chegará um momento que a imagem será quebrada e na parte quebrada só irá mostrar o background-color e o conteúdo escrito, vamos resolver isso na próxima aula
+                Detalhe! Se o conteúdo do site for maior que a imagem  chegará um momento que a imagem será quebrada e na parte quebrada só irá mostrar o background-color e o conteúdo escrito, vamos resolver isso na próxima aula
             */
+            background-attachment: fixed; /*Este comando vai deixar a imagem de fundo fixa independente do tamanho do conteúdo escrito.*/
             
+            
+            /*
+            Ordem do short hand background:
+            color > image > position > repeat > [size] > attachment
+            */
+            /*background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;*/
         }
         main{
             background-color: whitesmoke;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 3px solid darkblue;
@@ -40,6 +47,7 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque a nisi perspiciatis corrupti vitae ea? Pariatur ad, voluptatibus rem minima natus fuga. Commodi et amet suscipit libero maiores pariatur iste.
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos culpa voluptatibus totam vel quisquam laudantium praesentium accusantium in deserunt alias molestiae quas deleniti, sint necessitatibus fugiat nisi harum enim autem!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi libero nostrum provident! Nostrum alias corrupti blanditiis aliquid nihil ex quasi perferendis. Aliquid dolorem, perspiciatis officiis optio suscipit reprehenderit tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aperiam modi, harum iste corrupti expedita ad hic fuga non cum, rerum voluptate dolores. Veritatis nulla quae cupiditate eum voluptates rem dolor eos, officiis tempore commodi eligendi minus autem quam numquam a quod. Debitis optio modi sint quia consequatur eius sapiente totam, magnam tempora beatae numquam ut qui quod inventore omnis? Perspiciatis, iusto quisquam deserunt, corrupti dicta, nobis eligendi delectus ex sed neque impedit ad? Atque quisquam veniam a modi sapiente veritatis. Culpa maxime numquam soluta vero molestiae maiores quas incidunt, quis ad recusandae rem pariatur beatae ipsam! Consequuntur ex culpa blanditiis quis sunt labore unde eum commodi nostrum deserunt veniam doloribus amet hic esse dolore aspernatur fuga enim, odit repellat at modi est. Nostrum, quidem, excepturi a quasi ad voluptatibus, velit quibusdam cum nulla vitae natus esse sapiente nesciunt reprehenderit magni veritatis rerum libero ea nam odit illum quod praesentium. Atque ipsa assumenda eligendi ducimus provident veritatis error voluptates labore optio molestias aliquid rerum, reprehenderit iusto. Repellat quibusdam reprehenderit repudiandae excepturi aut vitae obcaecati amet minus sit, magni aperiam corrupti dolore harum necessitatibus, perspiciatis iste soluta totam ab? Accusantium alias quas, non eos voluptatem quidem beatae eveniet saepe quam corrupti! Dignissimos obcaecati quidem, rerum voluptates quibusdam cupiditate, unde qui fugit eveniet maxime earum, commodi nobis repellendus explicabo voluptatibus. Minus molestiae aperiam eum voluptates nam consequuntur. Nesciunt repudiandae nobis at molestias molestiae ullam voluptate quod alias modi veniam facilis inventore rem dignissimos esse, ipsum error quo iure praesentium nihil ipsa dolores odio quae labore natus. Ipsa doloremque assumenda sint, temporibus excepturi, veniam praesentium, reiciendis eligendi odit et ipsum exercitationem impedit! Laudantium distinctio quasi esse cumque velit quae est neque. A ad sed ipsam architecto, explicabo laborum accusantium perferendis! Itaque, enim illum. Voluptatibus natus esse eveniet beatae neque vero perspiciatis vitae, harum deleniti, quisquam laborum dolor, tempore consequuntur? Harum, eos! Quibusdam perspiciatis, temporibus iusto sunt fuga repellat at recusandae, tempore dignissimos eveniet nemo neque explicabo porro? Excepturi est nam minima omnis repellendus ea vero numquam. Molestias pariatur blanditiis voluptatibus sequi reprehenderit in aperiam enim neque totam ipsa magni eum alias repellendus, facilis labore! Quisquam dicta ad quas cupiditate eligendi asperiores obcaecati sit voluptatem? Harum ducimus officiis autem sed unde, error cum iusto quos? Facilis quia ipsa rem in asperiores similique commodi nisi sapiente illo ducimus voluptatem natus enim maiores cupiditate vitae accusamus eaque, inventore itaque. Exercitationem, dignissimos ut! Voluptatum reprehenderit deserunt a.
         </p>
     </main>
 </body>
