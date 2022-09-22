@@ -70,22 +70,38 @@ section{
     font-size: 3.5vw;
 }
 
+section > p{
+    padding-bottom: 20px;
+}
 section.normal{
     background-color: white;
     color: black;
 }
 
 section.imagem{
-    background-color: rgb(56, 53, 53);
+    background-color: rgba(56, 53, 53, 0.671);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.49);
+    background-size: cover;
+    background-attachment: fixed;/*Depos que tiver configurado sua imagem no fundo do seu site este comando irá servir para fazer o efeito paralax que nada mais é que deixar sua imagem fixa enquanto você rola o texto para baixo*/
 }
 
 section.imagem > p{
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.171);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.433);
     display: inline-block;
 }
 
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+}
 footer{
     background-color: black;
     color: white;
