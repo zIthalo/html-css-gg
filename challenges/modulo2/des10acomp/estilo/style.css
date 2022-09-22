@@ -33,7 +33,7 @@ body{
     
 }
 
-a.externo:after{
+a.externo::after{
     content: '\00a0\1F517'; /*este comando irá dar um espaço e adicionar um símbolo que peguei na emojipedia*/
 }
 
@@ -110,7 +110,7 @@ main p{
     text-align: justify;
     text-indent: 30px; /*Serve para dar Afastamento inicial de cada parágrafo*/
     line-height: 2em; /*Seve para dar Afastamento entre linhas de texto*/
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 main h2{
@@ -123,7 +123,7 @@ main h2{
 }
 
 main strong{
-    color: var(--cor4);
+    color: var(--cor5);
     font-weight: bold;
 }
 
@@ -145,7 +145,7 @@ main a:hover{
 }
 
 main img{
-    width: 100%;
+    width: 100%; /*Este comando fará as minhas imagens caberem 100% dentro da minha tag main, ou seja, não vão ficar vazadas saindo da tag*/
 }
 
 main img.bug{
@@ -202,12 +202,14 @@ footer{
 }
 
 footer > p > a{ /*funciona normalmente desde que tenham estas tags dentro de footer*/
+    color: var(--cor5);
     text-decoration: none;
-    background-color: var(--cor1);
+    background-color: var(--cor2);
     font-family: var(--fonte-padrao);
     transition-duration: .3s;
     border-radius: 3px;
     font-weight: bold;
+    padding: 3px;
 }
 footer > p > a:hover{
     background-color: var(--cor5);

@@ -7,7 +7,7 @@ font-family: 'droid';
             src: url('../fonts/idroid.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
-            /*Este comando/regra serve para colocar uma fonte externa no seu site.
+/*          Este comando/regra serve para colocar uma fonte externa no  seu site.
             E como foi feito este comando?
             1º você digitará esta regra 
             @font-face {
@@ -40,6 +40,7 @@ font-family: 'droid';
 }
 *{
     margin: 0;
+    padding: 0;
 }
 body{
     background-color: var(--cor0);
@@ -96,80 +97,123 @@ main{
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.377);
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.729);
     background-color: white;
-    text-align: center;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 
+main p{
+    text-align: center;
+    font-size: 1.2em;
 
 }
-main > article > h1{
+
+main h1{
     padding: 10px;
     font-family: var(--fonte-android);
     color: var(--cor5);
     font-weight: normal;
 }
-
-main > article > p{
+main h2{
+    font-weight: normal;
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    background-image: linear-gradient(to right, var(--cor1),  transparent);
+    padding-left: 10px;
+}
+main p{
     color: black;
     text-align: justify;
     text-indent: 20px;
-    font: normal 0.9em var(--fonte-padrão);
-    width: 700px;
+    font: normal 1.2em var(--fonte-padrão);
     margin: 0px 15px;
     padding-bottom: 15px;
     line-height: 2em;
 }
 
-
-
+main img{
+    width: 100%; /*Este comando fará as minhas imagens caberem 100% dentro da minha tag main, ou seja, não vão ficar vazadas saindo da tag*/
+}
+a{
+    padding: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    color: var(--cor5);
+}
 a:hover{
-    color: red;
+    color: var(--cor2);
+    background-color: var(--cor5);
+    border-radius: 5px;
+}
+a.externo:after{
+    content: '\00a0\1F517';
 }
 
-h2{
-    font-family: droid;
-    color: #0f4d2b;
-    margin: 15px 0px 15px 0px;
-    text-align: left;
-    padding: 0px 0px 0px 20px;
-    margin: 0px 0px 0px 20px;
-    background-image:linear-gradient(to right, #84E1AD, white) ;
-}
-.muie{
-    max-width: 790px;
-}
-section{
-    background-color: #b7e0c9;
-    width: 750px;
+.bug{
+    max-width: 350px;
+    display: block;
     margin: auto;
-    padding: 0px 6px 1px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 15px;
 }
-section > header{
-    background-color: #1A5C38;
-    text-align: left;
-    width: 750px;
-    padding: 1px 1px 1px 5px;
-    border-radius: 15px;
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px 20px 30px -5px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
 }
-section > p{
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+aside{
+    background-color: var(--cor1);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.448);
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 1px 1px 1px 7px;
+    border-radius: 10px 10px 0px 0px;
+    margin: -10px -10px 0px -10px;
+}
+/*aside > p{
     margin: 11px 0px 10px 26px;
     width: 500px;
     text-indent: 30px;
     text-align: justify;
     color: black;
-}
-ol{
+}*/
+aside > ul{
     color: black;
+    list-style-position: inside;
+    list-style-type: '\2714\00a0';
+    columns: 2;
+
 }
+
+
 footer{
     color: white;
     text-align: center;
-    background-color:#0f4d2b;
+    background-color:var(--cor5);
     margin: -10px 0px 0px 0px;
     padding: 5px 0px 5px 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-padrão);
+}
+
+footer > p > a{
+    background-color: var(--cor0);
+    border-radius: 5px;
 }
