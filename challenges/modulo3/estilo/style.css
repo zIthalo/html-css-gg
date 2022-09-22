@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+html, body{
+    min-height: 100vh;/*viewport height*/
+    background-color: darkgray;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    padding-top:50px;
+    /*text-transform: uppercase; isso fará todas as letras ficarem maiúsculas*/
+    font-variant: small-caps; /*Este comando fará somente as primeiras letras de cada palavra ficar maiúsculas*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+header a:hover, footer a:hover{
+    padding: 1px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(56, 53, 53);
+    color: white;
+}
+
+section.imagem > p{
+    background-color: rgba(0, 0, 0, 0.171);
+    width: 400px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
