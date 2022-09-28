@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de tabelas grandes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead{
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        anatomia para tabelas grandes:
+        Table
+            THEAD
+                TR, TD, TH
+            TBODY /*Esta é a unica tabela nescessária as demais não são*/
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <h1>Uso de tabelas grandes</h1>
+    <table>
+        <thead>
+            <th>
+                Estado
+            </th>
+            <th>
+                População
+            </th>
+        </thead>
+        
+        <tbody>
+            <td>
+                São Paulo
+            </td>
+            <td>
+                45 919 049
+            </td>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
