@@ -49,7 +49,7 @@ header > h1 {
     font-family: var(--fonte-destaque);
     font-size: 3em;
     font-weight: normal;
-    margin-bottom: 20px; /*Espaçamento entre título e texto*/
+    padding-bottom: 20px; /*Espaçamento entre título e texto*/
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418); /*Este comando serve para colocar sombra no texto, não confunda nunca text shadow com box shadow. Se quiser colocar sombra somente no texto use text-shadow se quiser colar na caixa inteira aí é o box-shadow*/
 }
 
@@ -61,6 +61,7 @@ header > p{
     margin: auto;
     padding-right: 10px; /*estes comandos foram usados para quando um texto ficar em uma tela menor eles não fiquem grudados nas bordas da tela*/
     padding-left: 10px;
+    padding-bottom: 20px;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
 }
 
@@ -71,7 +72,7 @@ nav{
 }
 
 nav > a{
-    color: white;
+    color: var(--cor2);
     padding: 10px;
     text-decoration: none;/*para tirar o underline*/
     font-weight: bold;
