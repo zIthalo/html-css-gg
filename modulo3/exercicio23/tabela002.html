@@ -8,10 +8,17 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
+            
         }
         table{
             width: 500px;
             border-collapse: collapse;
+        }
+        caption{
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.5em;
+            background-color: lightgray;
         }
         td, th{
             border: 1px solid black;
@@ -28,6 +35,7 @@
         td.num{
             text-align: right;
         }
+        
     </style>
 </head>
 <body>
@@ -35,8 +43,9 @@
         anatomia para tabelas grandes:
         Table
             THEAD
+            Capition que é como se fosse um título da tabela ou legenda
             O que eu posso ter dentro de cada parte
-                TR, TD, TH
+                TR=linha de tabela, TD=dado, TH=título
             TBODY /*Esta é a unica tabela nescessária as demais não são*/
                 TR, TD, TH
             TFOOT
@@ -44,11 +53,12 @@
     -->
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População dos estados do Brasil em 2022</caption>
         <thead>
-            <th>
+            <th scope="col">
                 Estado
             </th>
-            <th>
+            <th scope="col">
                 População
             </th>
         </thead>
@@ -192,6 +202,7 @@
                 <td class="num"><strong>212 600 000</strong></td>
             </tr>
         </tfoot>
+        
         <!--Se você colocar em qualquer lugar o tfoot, como ele é uma tag semântica, sempre ficará no fim da lista-->
     </table>
 </body>
