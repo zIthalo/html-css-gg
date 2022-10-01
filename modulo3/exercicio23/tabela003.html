@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;/*bara ficarem coladinhas as bordas da tabela*/
+            width: 300px;
+            margin-bottom: 30px;
+        }
+        thead {
+            background-color: gray;
+            border: 1px solid black;
+        }
+        td, th{
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+            transition-duration: 1s;
+            background-color: black;
+            color: white;
+        }
+        td > th:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                A
+            </td>
+            <td colspan="2"> <!--Este comando serve para expandir uma coluna por exemplo se ela ocupava somente um quadradinho agora neste caso ela ocupará 2 quadradinhos neste caso ele estica horizontalmente ele estica uma coluna
+            agora se você quiser esticar uma linha verticalmente você usa rowspan="3" no lugar do 3 você pode por qualquer número, você é quem sabe quantas linhas quadradinhas para baixo você irá querer-->
+                B
+            </td>
+            
+        </tr>
+        <tr>
+            <td rowspan="3">
+                D
+            </td>
+            <td>
+                E
+            </td>
+            <td rowspan="2">
+                F
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                H
+            </td>
+            
+        </tr>
+        <tr>
+           
+            <td colspan="2">
+                K
+            </td>
+            
+        </tr>
+    </table>
+
+    <table>
+        <thead>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td rowspan="2">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                
+            </tr>
+            <tr>
+                <td colspan="3">8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td rowspan="2">10</td>
+                <td colspan="2">11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4">A</td>
+                <td rowspan="4">B</td>
+            </tr>
+            <tr>
+                <td rowspan="4">C</td>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>K</td>
+                <td>L</td>
+            </tr>
+            <tr>
+                <td colspan="4">N</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
