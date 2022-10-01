@@ -9,33 +9,49 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+        table{
+            border-collapse: collapse;
+        }
+        caption{
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+        }
         thead{
             background-color: gray;
             color: white;
         }
+        
         th, td{
             border: 1px solid black;
             
             padding: 10px;
         }
-        table{
-            border-collapse: collapse;
-        }
+       
+        
     </style>
 </head>
 <body>
+    <h1>Exercício tabelas</h1>
+    
     <table>
+        
+        <caption>Filmes Favoritos</caption> <!--Esta tag você sempre coloca dentro da tag table e não fora para que o texto fique centralizado no meio da tabela-->
         <thead>
-            <th>Grupo</th>
-            <th>Nomes</th>
-            <th colspan="3">Filmes</th>
+            <!--Todos os THs têm que ter escopo isso é obrigatório para seu site ranquear bem no seo-->
+            <!--Quando utilizar col e quando utilizar colgroup? É Simples. Se o th estiver sem colspan ele será col se tiver com colspan ele será colgroup o mesmo serve para row e rowgroup agora atente-se para uma coisa, o rowgroup e o colgroup só receberá este escopo se de fato tiver abrangindo abaixo dele (colgroup) mais de uma coluna ou ao lado no caso de (rowgroup) mais de uma coluna veja o caso do tfoot ↓↓-->
+            <th scope="col">Grupo</th>
+            <th scope="col">Nomes</th>
+            <th colspan="3" scope="colgroup">Filmes</th><!--Este comando de expandir horizontalmente só irá acontecer quando você digitar as demais partes da tabela-->
         </thead>
+        <tfoot>
+            <th colspan="4" scope="row" >total</th>
+            <td>0000</td>
+            <!--O th do tfoot abrange 4 espaços de coluna porém não tem nenhuma coluna abaixo dele então ele jamais receberia um escopo de col ou colgroup. Por outro lado, ele também não tem um grupo de linhas ao lado dele então ele também não poderia receber um escopo de rowgroup. Já que tem somente uma linha ao lado dele, então só resta o escopo row -->
+        </tfoot>
         <tbody>
             <tr>
-                <td rowspan="4">Mulheres</td>
-            </tr>
-
-            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</td><!--Dica: Expanda o campo da tabela na horizontal ou vertical antes de colocar as demais linhas, expanda o quanto você for precisar antes ;), para não precisar fazer gambiarras-->
                 <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -54,9 +70,7 @@
                 <td>Big Hero</td>
             </tr>
             <tr>
-                <td rowspan="4">Homens</td>
-            </tr>
-            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</td><!--Coloque como título para ficar em negrito e da forma correta-->
                 <td>Bruno Mendonça</td>
                 <td>Intocáveis</td>
                 <td>Amnésia</td>

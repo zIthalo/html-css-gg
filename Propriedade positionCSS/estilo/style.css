@@ -1,1 +1,36 @@
-/*O position é uma propriedade CSS que define como um elemento pode ser posicionado no documento da página*/
+/*O position é uma propriedade CSS que define como um elemento pode ser posicionado no documento da página
+E esta propriedade combina com mais 4 propriedades que são top, bottom, right e left, ou seja você pode ter que utilizar a propriedade position junto com as propriedades top, bottom, left e right (essas vão dar o deslocamento em px do topo, de baixo da esquerda e da direita).
+Tipos de position static(padrão) não precisa ser configurado, fixed, relative, absolute, e sticky
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    /*height: 300vh;/*Este comando fez com que minha página criasse uma barra de rolagem vertical para que eu pudesse ver melhor o funcionamento do position*/
+}
+.container{
+    /*position: fixed; serve para deixar as caixas fixas na página mesmo que você role para baixo as caixas não vão sair da tela*/
+    /*margin-top: 20vh;
+    position: sticky; já no caso do sticky os elementos também vão ficar grudados na tela mas esta função vai ser ativada quando a tela chegar em determinado ponto por exemplo position: sticky; height: 20vh;, quando a tela atingir de 20vh para baixo os elementos com a position sticky ficarão grudados na tela*/
+    /*position: relative;
+    left: 200px; é muto utilizado para usar junto com o position absolute, mas se tratando de somente o relative, quando você coloca ele em uma caixa todo o top, bottom left e right que você der em px ele é como que se afasta dele mesmo estes px e por que ele é utilizado com o absolute você verá agora*/
+    position: relative;
+    margin: auto;
+    margin-top: 20vh;
+    width: 400px;
+    height: 400px;
+    background-color: skyblue;
+}
+.box{
+    position: absolute;/*O position absolute serve para configurar a localização de uma caixa que estiver dentro de outra com a position relative por exemplo se você quiser centralizar um video dentro de uma caixa com um fundo de uma cor qualquer você terá de utilizar a caixa colorida com position relative e a caixa do video com position absolute para que toda a configuração que você fizer na caixa do video ela ainda permaneça dentro da caixa colorida*/
+    top: 25%;
+    left: 25%;
+
+    width: 200px;
+    height: 200px;
+    background-color: lawngreen;
+    /*That's all folks*/
+}
