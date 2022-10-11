@@ -5,7 +5,7 @@ Estou aprendendo a criar sites e agora vou gerênciar repositórios!
 
 Meus sites no ar ↓↓
 
-<a href="https://zithalo.github.io/projeto-social/">Site de portifólio e redes sociais responsivo</a>
+<a href="https://zithalo.github.io/projeto-social/">Site portifólio e redes sociais responsivo</a>
 
 <a href="https://zithalo.github.io/projeto-android/">Site Android Responsivo</a>
 
