@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uso de iframes</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    iframe{
+        width: 95vh;
+        border: 2px solid black;
+        height: 400px;
+    }
+</style>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis maiores fugiat quisquam qui vero est consequuntur nam? Quis quos nisi dignissimos quibusdam voluptatum tenetur vitae maxime, distinctio possimus id qui!</p>
+    
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li> 
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+        <!-- O que estou fazendo, estou nesta lista fazendo comandos para as páginas que eu colocar em meus hrefs aprarecerem no meu iframe da página-->
+    </ul>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas temporibus similique eligendi quisquam ea provident dolor numquam explicabo inventore magnam odio laudantium in dolore incidunt cumque fugiat, pariatur quaerat vero sapiente sunt adipisci? Repellat dolore quibusdam dolorem. Molestias dolores quod quasi voluptatibus quos voluptas accusamus illo, harum doloribus eligendi et illum sequi eum, eos alias ullam nobis perferendis. In esse voluptate delectus odit repudiandae quam aliquid magnam, commodi, quibusdam quisquam nemo saepe, ullam deleniti eaque itaque culpa reprehenderit aliquam eos! Tempora, eaque adipisci! Recusandae placeat consectetur quis in quisquam asperiores, blanditiis facilis corrupti ad eos quia fuga tenetur cupiditate accusantium!</p>
+
+    <iframe src="" name="frame" srcdoc="<h1> Escolha uma das opções da lista acima</h1> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas temporibus similique eligendi quisquam ea provident dolor numquam explicabo inventore magnam odio laudantium in dolore incidunt cumque fugiat, pariatur quaerat vero sapiente sunt adipisci? Repellat dolore quibusdam dolorem. </p> <img src='img/English-Sbg200.png'>"> <!--O segredo para abrir os links dentro dos iframes é colocar o name-->
+        <p>Infelizmente o seu navegador não é compatível com isso</p>
+    </iframe>
+    <!--O que é o srcdoc? um pouco diferente do src, com o srcdoc você pode colocar comandos html dentro dele assim como eu fiz colocando um h1 nele-->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, corrupti laudantium? Modi itaque reprehenderit asperiores assumenda repellendus quo sit quasi quod ad atque, et, molestiae earum vel nihil! Beatae dolor accusantium blanditiis fuga unde nesciunt eum facere neque dignissimos laudantium architecto enim, aliquid incidunt dicta provident explicabo? Quas itaque dicta quia ea soluta inventore id dolor fugit, nostrum consequuntur temporibus quisquam facilis nesciunt, molestiae nam possimus? Vitae, temporibus? Similique fugiat, atque ullam aspernatur hic distinctio, modi at laboriosam unde quasi nisi recusandae quibusdam quae harum nostrum doloribus quis veniam pariatur tempora aut exercitationem ea, sit in! Maxime modi sed veniam non quaerat a rem voluptate recusandae labore, ipsum dolorem, id illo culpa magnam. Assumenda doloribus animi voluptatum expedita, doloremque ab aliquid accusamus suscipit dolores impedit laudantium voluptates vitae quaerat corrupti nemo fugit dolore rem, maxime voluptas ipsam alias itaque! Adipisci quo laborum quisquam ipsum dicta reprehenderit explicabo quaerat. Eveniet doloremque possimus doloribus quasi, illo ullam sit, dignissimos repellendus fuga quam earum tempora consequatur. Praesentium quo neque, ea culpa sequi voluptate tempore laborum nostrum repellendus voluptatum suscipit fugit ipsam, delectus porro laudantium qui perferendis cumque error, expedita cum velit debitis. Eum facere quaerat atque sapiente tenetur? Repellendus perspiciatis sed repudiandae! Earum.</p>
+</body>
+</html>
