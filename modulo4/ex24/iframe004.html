@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança dos iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facere, harum ipsam iure ipsum similique beatae provident reiciendis omnis amet, nemo esse consectetur hic aut animi vero porro fugiat pariatur.</p>
+
+    <iframe src="paginas-extras/pag004.html" sandbox="allow-forms allow-same-origin allow-scripts" referrerpolicy="no-referrer"> <!--O sandbox="sandbox" serve para bloquear qualquer tentativa de terceiros de capturar dados. já o referrerpolicy="no-referrer" serve para não rastrear os dados de navegação dos usuários. E este comando sandbox="allow-forms allow-same-origin allow-scripts" serve para bloquear muitas funções mas permite que o iframe seja da mesma origem, que permita a aplicação de formulários e que permita scripts-->
+        <p>Seu navegador não é compatível com isso</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nulla eius blanditiis adipisci perspiciatis modi reprehenderit quia nobis dignissimos debitis, possimus earum laudantium odio voluptas eos maxime voluptate, quam quo.</p>
+</body>
+</html>
