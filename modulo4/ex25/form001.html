@@ -13,9 +13,22 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form action="cadastro.php" autocomplete="off"> <!--Todo formulário tem que estar dentro de uma tag form
+    <form action="cadastro.php" autocomplete="off" method="post"> <!--Todo formulário tem que estar dentro de uma tag form
     
         O comando action serve para enviarmos os dados de um formulário para uma linguagem de programação que no caso será o php
+
+        O método que eu utilizei foi o post para não mostrar os dados que a pessoa digitou na url do site, mas se um usuário for procurar no devtools → network/rede → clicar no cadastro.php → e ir em cabeçalhos ele vai encontrar o nome e sobrenome, no caso deste site
+
+        Quando utilizar o método get ou post?
+
+        Utilize o método get na tag form sempre que os dados não forem sensíveis
+        Existem 2 situações para você não utilizar o método get, são elas:
+
+        Quando um formulário capturar mais de 3 mil bytes, ou seja, mais de 3 mil caracteres.
+
+        Ou se as informações forem muito sensíveis, incluindo também o envio de fotos. Nestes casos utilize o POST
+
+        Se você estiver trabalhando com números de cartão de crédito, cpfs, etc. utilize o POST mas aprenda a utilizar https (no futuro)
     -->
         <fieldset>
             <!--Como desativar as ajudas de ultimas pesquisas (auto preencimento)? é só colocar isso no form autocomplete="off"-->
@@ -24,7 +37,12 @@
                 <input type="text" name="nome" id="inome"></p>
             <!--O comando name de cada input é mais útil para a linguagem html e para php enquando as classes e ids são mais úteis para javascript e para o uso do label-->
             <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+                <!--UTILIZE SEMPRE O LABEL
+                
+                    Os dados digitados em nome e sobrenome são enviados para a url do site após você pressionar o botão de submit
 
+                Existem dois métodos para envio de formulário
+                -->
             <p><input type="submit" value="Enviar"></p>
         </fieldset>
     </form>
