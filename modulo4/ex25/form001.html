@@ -13,10 +13,18 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form action=""> <!--Todo formulário tem que estar dentro de uma tag form-->
+    <form action="cadastro.php" autocomplete="off"> <!--Todo formulário tem que estar dentro de uma tag form
+    
+        O comando action serve para enviarmos os dados de um formulário para uma linguagem de programação que no caso será o php
+    -->
         <fieldset>
-            <p>Nome: <input type="text" name="nome" id="nome"></p>
-            <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+            <!--Como desativar as ajudas de ultimas pesquisas (auto preencimento)? é só colocar isso no form autocomplete="off"-->
+            <!-- Como vamos fazer para que o p nome se conecte com o input nome?-->
+            <p><label for="inome">Nome: </label> <!--Este label serve para quando a gente clicar na palavra nome, no caso deste site, ele já selecione a caixa de dados para digitar e o parâmetro for, utilizado no label serve para colocar o id do input para assim, relacionar os caracteres digitados com a caixa input-->
+                <input type="text" name="nome" id="inome"></p>
+            <!--O comando name de cada input é mais útil para a linguagem html e para php enquando as classes e ids são mais úteis para javascript e para o uso do label-->
+            <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+
             <p><input type="submit" value="Enviar"></p>
         </fieldset>
     </form>
