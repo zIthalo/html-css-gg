@@ -6,18 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Formulário</title>
 </head>
+
 <body>
     <form action="cadastro.php" method="get" autocomplete="on">
-        <fieldset>
+        <fieldset> <!--Serve para criar uma borda ao redor dos inputs-->
+            <legend>Dados Pessoais</legend> <!--Cria uma legenda na barrinha do fieldset-->
+            <p>
+                <label for="inome">nome:</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="25" placeholder="nome">
+            </p>
             <p>
                 <label for="imail">Email:</label>
-                <input type="email" name="mail" id="imail" required autocomplete="email">
+                <input type="email" name="mail" id="imail" required autocomplete="email" placeholder="email">
             </p>
             <p>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^(\d{2})\d{4-5}-\d{4-5}$" placeholder="(xx)x xxxx-xxxx">
+                <!--Você consegue definir o padrão de digitação de telefone mas estude isso mais para frente regex
+                
+                    O que significa isso pattern="^(\d{2})\d{4-5}-\d{4-5}$"?
+
+                    Isso é um tipo de regex e a tradução é parêntesis-dentro do parêntesis terá 2 dígitos-fecha parêntesis-depois terão de 4 a 5 digitos-um hífen- mais 4 a 5 dígitos. Esse regex sempre se inicia com acento circunflexo e termina com sifrão
+
+                -->
             </p>
         </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
     </form>
 </body>
 </html>
