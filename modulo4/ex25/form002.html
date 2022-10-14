@@ -9,24 +9,26 @@
 <body>
     <h1>Teste de Formulário</h1>
     <form action="cadastro.php" method="post" autocomplete="off">
-        <p>
-            <label for="iusu">Usuário:</label>
-            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="30" placeholder="login" autocomplete="username">
-            <!--Minlength e maxlength serve para colocar limite mínimo e máximo de caracteres por caixa e o size para aumentar o tamanho visual da caixa. O placeholder serve para colocar aqueles nomes "fantasmas" dentro do input-->
-        </p>
-        <p>
-            <label for="isen">Senha:</label>
-            <input type="password" name="sen" id="isen" required minlength="6" placeholder="senha" autocomplete="current-password">
-            <!--Como utilizar os auto completes?
-             Para utilizar os autocompletes de forma mais organizada a gente faz o seguinte: 
-             Primeiro colocamos autocomplete="on" no form, depois colocamos autocomplete="username" para o nome de usuário e autocomplete="current-password" para colocar as senhas de um usuário
+        <fieldset>
+            <p>
+                <label for="iusu">Usuário:</label>
+                <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="30" placeholder="login" autocomplete="username">
+                <!--Minlength e maxlength serve para colocar limite mínimo e máximo de caracteres por caixa e o size para aumentar o tamanho visual da caixa. O placeholder serve para colocar aqueles nomes "fantasmas" dentro do input-->
+            </p>
+            <p>
+                <label for="isen">Senha:</label>
+                <input type="password" name="sen" id="isen" required minlength="6" placeholder="senha" autocomplete="current-password">
+                <!--Como utilizar os auto completes?
+                 Para utilizar os autocompletes de forma mais organizada a gente faz o seguinte:
+                 Primeiro colocamos autocomplete="on" no form, depois colocamos autocomplete="username" para o nome de usuário e autocomplete="current-password" para colocar as senhas de um usuário
             
-            -->
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
+                -->
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
     </form>
 </body>
 </html>
