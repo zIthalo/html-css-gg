@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio n' checkboxes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        label{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend> <!--Toda vez que for criar um input radio nunca esqueça de deixar todos eles com o mesmo name, os ids devem ser diferentes mas os names têm que ser iguais. Se quiser que algum radio já esteja marcado é só você declarar ele como checked, fiz este exemplo no masculino e em basquete e futebol.
+            
+                Você não pode colocar mais de um radio como checked, mas você pode fazer isso com os checkboxes
+            -->
+            <input type="radio" name="sexo" id="imas" checked> <label for="imas">Masculino</label> <br>
+            <input type="radio" name="sexo" id="ifem"><label for="ifem">Feminino</label> <br>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes</legend>
+            <p>
+                
+                <input type="checkbox" name="esbas" id="iesbas" checked><label for="iesbas">Basquete</label> <br>
+                <input type="checkbox" name="esfut" id="iesfut" checked><label for="iesfut" >Futebol</label> <br>
+                <input type="checkbox" name="esnat" id="iesnat"><label for="iesnat">Natação</label> <br>
+                <input type="checkbox" name="esten" id="iesten"><label for="iesten">Tênis</label> <br>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
