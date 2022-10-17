@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de formulário </title>
+    <style>
+        
+        label{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Exemplo de formulário</h1>
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <form action="cadastro.php" method="post" autocomplete="on">
         <fieldset>
             <legend>
                 Não é mais sobre input
@@ -23,7 +29,7 @@
                         <option value="PE">Pernambuco</option>
                     </optgroup>
 
-                    <optgroup label="Região Sudeste"> <!--Esta tag serve para agrupar as tags options-->
+                    <optgroup label="Região Sudeste"> <!--Esta tag serve para agrupar as tags options aqui eu coloco o título que envolve cada opção, no label. e todas essas tags vão dentro de uma tag select, que irá mostrar um menu de opções, neste caso estou utilizando para os estados do brasil e cada optgroup recebe o título da região dos estados das tags options-->
                         <option value="MG">Minas Gerais</option>
                         <option value="RJ">Rio de Janeiro</option>
                         <option value="SP">São Paulo</option>
@@ -34,13 +40,22 @@
             <p>
                 <label for="iprof">Profissão: </label>
                 <input type="text" name="prof" id="iprof" list="lstprof">
-                <datalist id="lstprof">
-                    <option value="ADM">Administrador</option>
+                <datalist id="lstprof"> <!--A tag datalist é um outro tipo de menu só que agora usado para profissões. se colocarmos somente o datalist com as options e clicarmos nele não aparecerá nada, mas se quisermos que ao clicarmos apareça um menu com uma lista de profissões temos que, 1º dar um id para a tag, depois criar uma label e um input text para ela assim como fiz acima↑↑↑.
+                
+                    OBS: crie um id para a datalist, depois crie um input com nome e id, crie um atributo list e coloque o id que você criou para o datalist dentro das aspas, daí você cria uma label, no atributo for coloque o id do input entre as aspas e pronto.
+                -->
+                    <option value="ADM">Administrador</option><!-- se quando você clicar você não quiser que a´pareça o value é só excluir-->
                     <option value="CONT">Contabilista</option>
                     <option value="DEV">Desenvolvedor</option>
                     <option value="PROF">Professor</option>
                 </datalist>
             </p>
+
+            <p>
+                <label for="imsg">Mensagem: <br></label>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea> <!--Esta é a tag deixada para seu usuário deixar alguma mensagem/ comentário]-->
+            </p>
+
         </fieldset>
         <p>
             <input type="submit" value="Enviar">
