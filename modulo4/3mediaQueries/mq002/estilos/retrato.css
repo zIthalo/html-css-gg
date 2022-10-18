@@ -3,7 +3,8 @@
 /*Aparelho em pé*/
 
 body{
-    background-image: url(../imagens/cev-portrait.jpg);
+    background-image: url(../imagens/cev-portrait.jpg); /*Esta é a forma que usamos para adicionar uma imagem em qualquer tag html através do css*/
     background-position: center bottom
+    /*Aqui eu posicionei a imagem ao centro baixo dela*/
     ;
 }
