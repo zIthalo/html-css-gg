@@ -1,0 +1,94 @@
+:root{
+    --royal-blue-light: #4044ed;
+    --royal-blue-dark: #3946d4;
+    --white: #fff;
+    --background: #e2e3e9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body{
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    */
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background); 
+ }
+
+ a{
+    color: var(--white);
+    text-decoration: none;
+ }
+
+ .header{
+    display: flex; /*isso deixa a lista e logo um do lado do outro*/
+    align-items: center; /*Alinha um ao outro no centro*/
+    justify-content: space-between; /*Isso coloca um espaço entre o logo e lista o lgo vai ficar na esquerda e a lista à direita */
+    background: var(--royal-blue-light);
+    height: 4.6875rem; /*Como que eu cheguei neste valor? Eu queria uma altura de 75px mas para deixar tudo mais acessível queria converter 75px para rem, entaõ para fazer isso eu precisaria pegar 75px e dividir por 16px. O resultado foi colado  e colocado rem ao final do valor. Por que 75px dividido por 16px? Porque 16px = 1rem. Mesmo assim este comando não vai te obedecer, pois vai ficar com mais de 75px, como nas htmls tudo é feito em caixas, os valores são somados a padding, margin, border etc. Para resolver isso foi colocado no seletor global o comando box-sizing: border-box;  para ter somente os tamanhos de caixa que eu colocar e não terem valores padrão que os navegadores dão*/
+
+
+    padding: 1rem; /*O rem tem o tamanho padrão de 16px serve para facilitar quando alguém quiser aumentar o tamanho da fonte do seu site (Pessoas que não enxergam bem)*/
+
+ }
+
+ .logo{
+    font-size: 1.5rem;
+    font-weight: bold
+ }
+
+ .menu{
+    list-style: none; /*Para tirar as bolinhas de lista*/
+    display: flex; /*Para colocar os itens da lista um do lado do outro*/
+    gap: 0.5rem; /*Este gap dará um espaço entre os itens da lista afastando-os lateralmente. 0.5rem = 8px*/
+
+ }
+
+ .menu a {
+    display: block; /*Para que eles ocupem todo o espaço necessário no tamanho deles*/
+    padding: 0.5rem; /*Para facilitar a área tocável dos itens da lista*/
+    transition-duration: .3s;
+ }
+
+ .menu a:hover{
+    background: var(--royal-blue-dark);
+    border-radius: 5px;
+
+ }
+
+ .label-menu, .checkbox{
+    display: none;
+ }
+
+ /*Como se lê um mediaQuery? Quando minha tela estiver em um valor de no máximo 600px de largura faça estas configurações abaixo para .menu, .label-menu*/
+@media (max-width: 600px){
+    .menu{
+        display: none;
+    }
+    .label-menu{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--white);
+        padding-block: 1rem; /*Padding block nada mais é que dar um espaço em cima e em baixo*/
+        cursor: pointer;
+
+    }
+
+    .hamburguer{
+        border-top: 0.125rem solid; /*0.125rem = 2px. Como fazer a conta? 2/16*/
+        width: 1.25rem;
+    }
+    .hamburguer::before, .hamburguer::after{
+        content: " ";
+        display: block; /*coloquei block porque span é tipo inline*/
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor; /*cor atual*/
+        margin-top: .3125rem; /*5px usei para afastar as barrinhas do burguer menu*/ 
+    }
+}
+ /*Terminada essas configurações vamos fazer o truque do checkbox para fazer o menu hambúrguer*/
