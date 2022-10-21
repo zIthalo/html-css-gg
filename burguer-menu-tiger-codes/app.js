@@ -12,4 +12,4 @@ function handleButtonClick(event){
 btnMenu.addEventListener("click", handleButtonClick);
 btnMenu.addEventListener("touchstart", handleButtonClick)
 
-//pausei pois estava além da minha compreensão
+//pausei aqui
