@@ -59,7 +59,7 @@
 
  }
 
- .label-menu, .checkbox{
+ .btn-menu{
     display: none;
  }
 
@@ -87,13 +87,15 @@
       border-bottom: 0.0625rem solid #0000002a;
       border-radius: 0%;
     }
-    .label-menu{
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--white);
-        padding-block: 1rem; /*Padding block nada mais é que dar um espaço em cima e em baixo*/
-        cursor: pointer;
+    .btn-menu{
+      background: none;
+      border: none;
+      font: inherit;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--white);
+      padding-block: 1rem; /*Padding block nada mais é que dar um espaço em cima e em baixo*/
+      cursor: pointer;
     }
 
     .hamburguer{
@@ -110,19 +112,19 @@
         position: relative;
         transition: 0.3s;
     }
-    .checkbox:checked ~ .menu{
+    .nav .active .menu{
       
       visibility: visible;
       overflow-y: auto; /*Se o menu tiver mais listas o usuário possa rolar até em baixo para conseguir ver as opções*/
       height: calc(100vh - 4.6875rem); /*Fiz este cálculo para que o meu menu não gere barra de rolagem. Como é feito este cálculo? Quero que a altura seja de 100vh - a altura do meu header*/
     }
-    .checkbox:checked ~.label-menu .hamburguer{
+    .nav .active .hamburguer{
       border-top-color: transparent;
     }
-    .checkbox:checked ~ .label-menu .hamburguer::before{
+    .nav .active .hamburguer::before{
       transform: rotate(135deg);
     }
-    .checkbox:checked ~ .label-menu .hamburguer::after{
+    .nav .active .hamburguer::after{
       transform: rotate(-135deg);
       top: -0.4375rem;
    }
