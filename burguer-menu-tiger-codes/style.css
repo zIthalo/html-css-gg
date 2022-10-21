@@ -68,7 +68,24 @@
 @media (max-width: 600px){
     .menu{
         display: block;
+        visibility: hidden;
+        overflow-y: hidden;
         position: absolute; /*Este comando irá fazer meu menu hambúrger sair do fluxo omal do html e se posicionar à frente de tudo e isso me faz desbloquear as configurações top, left, bottom e right*/
+        top: 4.6875rem; /*O valor de top coloquei na mesma altura do header para ficar exatamente abaixo dele*/
+        left: 0; /*isto fará com que meu menu fique abaixo da minha logo bem coladinho na esquerda do meu site*/
+        background: var(--royal-blue-light);
+        text-align: center; /*centralizei o texto porque quando eu colocar 100% de width meu conteúdo ficar centralizado*/
+        width: 100%; /*fiz isso porque quando o display é block e a position é absolute meu bloco perde as extremidades ponta a ponta*/
+        height: 0;
+        z-index: 1; /*Serve para chamar a frente de todos os elementos da página e não deixar outros ficarem à sua frente*/
+        transition: .5s;
+    }
+
+    .menu a{
+      padding: 1rem 0;
+      margin-inline: 1rem;
+      border-bottom: 0.0625rem solid #0000002a;
+      border-radius: 0%;
     }
     .label-menu{
         display: flex;
@@ -90,6 +107,158 @@
         height: 0.125rem;
         background: currentColor; /*cor atual*/
         margin-top: .3125rem; /*5px usei para afastar as barrinhas do burguer menu*/ 
+        position: relative;
+        transition: 0.3s;
     }
+    .checkbox:checked ~ .menu{
+      
+      visibility: visible;
+      overflow-y: auto; /*Se o menu tiver mais listas o usuário possa rolar até em baixo para conseguir ver as opções*/
+      height: calc(100vh - 4.6875rem); /*Fiz este cálculo para que o meu menu não gere barra de rolagem. Como é feito este cálculo? Quero que a altura seja de 100vh - a altura do meu header*/
+    }
+    .checkbox:checked ~.label-menu .hamburguer{
+      border-top-color: transparent;
+    }
+    .checkbox:checked ~ .label-menu .hamburguer::before{
+      transform: rotate(135deg);
+    }
+    .checkbox:checked ~ .label-menu .hamburguer::after{
+      transform: rotate(-135deg);
+      top: -0.4375rem;
+   }
 }
  /*Terminada essas configurações vamos fazer o truque do checkbox para fazer o menu hambúrguer*/
+
+ /*Existe outra forma de se fazer que é com o button mas não vale a pena pois não funciona em dispositivos móveis. A melhor forma de se fazer este menu é com JS */
+
+ /* FORMA DO MNENU HAMBURGUER COM CHECK BOX
+  :root{
+   --royal-blue-light: #4044ed;
+   --royal-blue-dark: #3946d4;
+   --white: #fff;
+   --background: #e2e3e9;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; /*Esta configuração serve para que eu consiga colocar o tamanho que eu quiser em uma caixa html sem que o próprio navegador coloque algum margin ou padding automaticamente*/
+/*}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+   
+   background: var(--background); 
+}
+
+a{
+   color: var(--white);
+   text-decoration: none;
+}
+
+.header{
+   display: flex; /*isso deixa a lista e logo um do lado do outro*/
+   /*align-items: center; /*Alinha um ao outro no centro*/
+   /*justify-content: space-between; /*Isso coloca um espaço entre o logo e lista o lgo vai ficar na esquerda e a lista à direita */
+   /*background: var(--royal-blue-light);
+   height: 4.6875rem; /*Como que eu cheguei neste valor? Eu queria uma altura de 75px mas para deixar tudo mais acessível queria converter 75px para rem, entaõ para fazer isso eu precisaria pegar 75px e dividir por 16px. O resultado foi colado  e colocado rem ao final do valor. Por que 75px dividido por 16px? Porque 16px = 1rem. Mesmo assim este comando não vai te obedecer, pois vai ficar com mais de 75px, como nas htmls tudo é feito em caixas, os valores são somados a padding, margin, border etc. Para resolver isso foi colocado no seletor global o comando box-sizing: border-box;  para ter somente os tamanhos de caixa que eu colocar e não terem valores padrão que os navegadores dão*/
+
+
+   /*padding: 1rem; /*O rem tem o tamanho padrão de 16px serve para facilitar quando alguém quiser aumentar o tamanho da fonte do seu site (Pessoas que não enxergam bem)*/
+
+/*}
+
+.logo{
+   font-size: 1.5rem; /*24px*/
+/*   font-weight: bold
+}
+
+.menu{
+   list-style: none; /*Para tirar as bolinhas de lista*/
+/*   display: flex; /*Para colocar os itens da lista um do lado do outro*/
+/*   gap: 0.5rem; /*Este gap dará um espaço entre os itens da lista afastando-os lateralmente. 0.5rem = 8px*/
+
+/*}
+
+.menu a {
+   display: block; /*Para que eles ocupem todo o espaço necessário no tamanho deles*/
+/*   padding: 0.5rem; /*Para facilitar a área tocável dos itens da lista*/
+ /*  transition-duration: .3s;
+}
+
+.menu a:hover{
+   background: var(--royal-blue-dark);
+   border-radius: 5px;
+
+}
+
+.label-menu, .checkbox{
+   display: none;
+}
+
+/*Como se lê um mediaQuery? Quando minha tela estiver em um valor de no máximo 600px de largura faça estas configurações abaixo para .menu, .label-menu*/
+
+/*@media (max-width: 600px){
+   .menu{
+       display: block;
+       visibility: hidden;
+       overflow-y: hidden;
+       position: absolute; /*Este comando irá fazer meu menu hambúrger sair do fluxo omal do html e se posicionar à frente de tudo e isso me faz desbloquear as configurações top, left, bottom e right*/
+  /*     top: 4.6875rem; /*O valor de top coloquei na mesma altura do header para ficar exatamente abaixo dele*/
+    /*   left: 0; /*isto fará com que meu menu fique abaixo da minha logo bem coladinho na esquerda do meu site*/
+      /* background: var(--royal-blue-light);
+       text-align: center; /*centralizei o texto porque quando eu colocar 100% de width meu conteúdo ficar centralizado*/
+      /* width: 100%; /*fiz isso porque quando o display é block e a position é absolute meu bloco perde as extremidades ponta a ponta*/
+      /* height: 0;
+       z-index: 1; /*Serve para chamar a frente de todos os elementos da página e não deixar outros ficarem à sua frente*/
+      /* transition: .5s;
+   }
+
+   .menu a{
+     padding: 1rem 0;
+     margin-inline: 1rem;
+     border-bottom: 0.0625rem solid #0000002a;
+     border-radius: 0%;
+   }
+   .label-menu{
+       display: flex;
+       align-items: center;
+       gap: 0.5rem;
+       color: var(--white);
+       padding-block: 1rem; /*Padding block nada mais é que dar um espaço em cima e em baixo*/
+      /* cursor: pointer;
+   }
+
+   .hamburguer{
+       border-top: 0.125rem solid; /*0.125rem = 2px. Como fazer a conta? 2/16*/
+      /* width: 1.25rem;
+   }
+   .hamburguer::before, .hamburguer::after{
+       content: " ";
+       display: block; /*coloquei block porque span é tipo inline*/
+      /* width: 1.25rem; /*20px*/
+      /* height: 0.125rem;
+       background: currentColor; /*cor atual*/
+      /* margin-top: .3125rem; /*5px usei para afastar as barrinhas do burguer menu*/ 
+      /* position: relative;
+       transition: 0.3s;
+   }
+   .checkbox:checked ~ .menu{
+     
+     visibility: visible;
+     overflow-y: auto; /*Se o menu tiver mais listas o usuário possa rolar até em baixo para conseguir ver as opções*/
+     /*height: calc(100vh - 4.6875rem); /*Fiz este cálculo para que o meu menu não gere barra de rolagem. Como é feito este cálculo? Quero que a altura seja de 100vh - a altura do meu header*/
+   /*}
+   .checkbox:checked ~.label-menu .hamburguer{
+     border-top-color: transparent;
+   }
+   .checkbox:checked ~ .label-menu .hamburguer::before{
+     transform: rotate(135deg);
+   }
+   .checkbox:checked ~ .label-menu .hamburguer::after{
+     transform: rotate(-135deg);
+     top: -0.4375rem;
+  }
+} 
+*/
