@@ -64,6 +64,7 @@
  }
 
  /*Como se lê um mediaQuery? Quando minha tela estiver em um valor de no máximo 600px de largura faça estas configurações abaixo para .menu, .label-menu*/
+
 @media (max-width: 600px){
     .menu{
         display: none;
@@ -75,7 +76,6 @@
         color: var(--white);
         padding-block: 1rem; /*Padding block nada mais é que dar um espaço em cima e em baixo*/
         cursor: pointer;
-
     }
 
     .hamburguer{
