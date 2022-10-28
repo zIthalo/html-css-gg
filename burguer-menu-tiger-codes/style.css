@@ -98,11 +98,11 @@
       cursor: pointer;
     }
 
-    .hamburguer{
+    .burguer{
         border-top: 0.125rem solid; /*0.125rem = 2px. Como fazer a conta? 2/16*/
         width: 1.25rem;
     }
-    .hamburguer::before, .hamburguer::after{
+    .burguer::before, .burguer::after{
         content: " ";
         display: block; /*coloquei block porque span é tipo inline*/
         width: 1.25rem; /*20px*/
@@ -118,13 +118,13 @@
       overflow-y: auto; /*Se o menu tiver mais listas o usuário possa rolar até em baixo para conseguir ver as opções*/
       height: calc(100vh - 4.6875rem); /*Fiz este cálculo para que o meu menu não gere barra de rolagem. Como é feito este cálculo? Quero que a altura seja de 100vh - a altura do meu header*/
     }
-    .nav .active .hamburguer{
+    .nav .active .burguer{
       border-top-color: transparent;
     }
-    .nav .active .hamburguer::before{
+    .nav .active .burguer::before{
       transform: rotate(135deg);
     }
-    .nav .active .hamburguer::after{
+    .nav .active .burguer::after{
       transform: rotate(-135deg);
       top: -0.4375rem;
    }
