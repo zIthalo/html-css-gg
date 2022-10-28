@@ -103,11 +103,14 @@ main{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-
 main p{
-    text-align: center;
-    font-size: 1.2em;
-
+    color: black;
+    text-align: justify;
+    text-indent: 20px;
+    font: normal 1.2em var(--fonte-padrão);
+    margin: 0px 15px;
+    padding-bottom: 15px;
+    line-height: 2em;
 }
 
 main h1{
@@ -123,19 +126,11 @@ main h2{
     background-image: linear-gradient(to right, var(--cor1),  transparent);
     padding-left: 10px;
 }
-main p{
-    color: black;
-    text-align: justify;
-    text-indent: 20px;
-    font: normal 1.2em var(--fonte-padrão);
-    margin: 0px 15px;
-    padding-bottom: 15px;
-    line-height: 2em;
-}
 
 main img{
     width: 100%; /*Este comando fará as minhas imagens caberem 100% dentro da minha tag main, ou seja, não vão ficar vazadas saindo da tag*/
 }
+
 a{
     padding: 4px;
     text-decoration: none;
